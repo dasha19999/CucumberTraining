@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-    public class CommonMethods {
+    public class CommonMethods extends PageInitializer {
 
         public static WebDriver driver;
 
@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
             driver.get(ConfigReader.getPropertyValue("url"));
             driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
-           //need to initialize Page Objects here when Page Initializer class is ready
+            initializePageObjects();
 
         }
 
