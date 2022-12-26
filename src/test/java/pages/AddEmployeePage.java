@@ -31,7 +31,7 @@ public class AddEmployeePage {
     @FindBy (id="[id='re_password']")
     public WebElement confirmPassword;
 
-    @FindBy (id="[id='ç']")
+    @FindBy (id="[id='employeeId']")
     public WebElement employeeId;
 
     @FindBy (id="[id='btnSave']")

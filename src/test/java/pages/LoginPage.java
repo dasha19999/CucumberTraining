@@ -7,10 +7,10 @@ import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
     @FindBy (id="[id='txtUsername']")
-    public WebElement userNameFiled;
+    public WebElement userNameField;
 
     @FindBy (id="[id='txtPassword']")
-    public WebElement passWordFiled;
+    public WebElement passWordField;
 
     @FindBy (id="[id='btnLogin']")
     public WebElement loginButton;
