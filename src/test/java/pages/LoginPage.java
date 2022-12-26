@@ -6,19 +6,22 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
-    @FindBy (id="[id='txtUsername']")
-    public WebElement userNameField;
 
-    @FindBy (id="[id='txtPassword']")
-    public WebElement passWordField;
+    @FindBy(xpath ="//input[@id='txtUsername']")
+    public WebElement usernameTextField;
 
-    @FindBy (id="[id='btnLogin']")
+    @FindBy(id="txtPassword")
+    public WebElement passwordTextField;
+
+    @FindBy(xpath="//*[@id='btnLogin']")
     public WebElement loginButton;
 
-    @FindBy (id="[id='spanMessage']")
+    @FindBy(xpath="//*[@id='spanMessage']")
     public WebElement errorMessage;
 
-   public LoginPage(){
-        PageFactory.initElements(driver,this);
+    public LoginPage(){
+
+        PageFactory.initElements(driver, this);
     }
 }
+
