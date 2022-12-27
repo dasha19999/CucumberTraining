@@ -17,8 +17,8 @@ public class AddJobDetailsSteps {
         throw new io.cucumber.java.PendingException();
     }
 
-    @When("user clicks edit")
-    public void user_clicks_edit() {
+    @When("user clicks edit button")
+    public void user_clicks_edit_button() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

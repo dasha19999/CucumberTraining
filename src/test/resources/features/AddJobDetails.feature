@@ -13,7 +13,7 @@ When user click the employee name
   Then Employee personal page is present
   When  user clicks Job button
   Then Job tab is present
-  When user clicks edit
+  When user clicks edit button
 
   @test10
 Scenario: adding job details to an existing employee profile
