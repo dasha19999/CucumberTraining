@@ -6,16 +6,16 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
-    @FindBy (id="[id='txtUsername']")
+    @FindBy (id="txtUsername")
     public WebElement userNameField;
 
-    @FindBy (id="[id='txtPassword']")
+    @FindBy (id="txtPassword")
     public WebElement passWordField;
 
-    @FindBy (id="[id='btnLogin']")
+    @FindBy (id="btnLogin")
     public WebElement loginButton;
 
-    @FindBy (id="[id='spanMessage']")
+    @FindBy (id="spanMessage")
     public WebElement errorMessage;
 
     public LoginPage(){

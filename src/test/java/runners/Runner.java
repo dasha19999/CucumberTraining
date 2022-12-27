@@ -11,8 +11,9 @@ import org.junit.runner.RunWith;
 
     @RunWith(Cucumber.class)
     @CucumberOptions(
-            features =
-                    "src\\test\\java\\CucumberTool\\Login.feature"
+            features = "src/test/resources/features/Login.feature",
+            glue = "steps",
+            dryRun = false
     )
 
     public class Runner {
