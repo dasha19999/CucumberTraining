@@ -7,34 +7,34 @@ import utils.CommonMethods;
 
 
 public class AddEmployeePage extends CommonMethods {
-    @FindBy (id="[id='firstName']")
+    @FindBy (id="firstName")
     public WebElement firstNameField;
 
-    @FindBy (id="[id='middleName']")
+    @FindBy (id="middleName")
     public WebElement middleNameField;
 
-    @FindBy (id="[id='lastName']")
+    @FindBy (id="lastName")
     public WebElement lastNameField;
 
-    @FindBy (id="[id='photofile']")
+    @FindBy (id="photofile")
     public WebElement photograph;
 
-    @FindBy (id="[id='chkLogin']")
+    @FindBy (id="chkLogin")
     public WebElement checkBox;
 
-    @FindBy (id="[id='user_name']")
+    @FindBy (id="user_name")
     public WebElement userName;
 
-    @FindBy (id="[id='user_password']")
+    @FindBy (id="user_password")
     public WebElement password;
 
-    @FindBy (id="[id='re_password']")
+    @FindBy (id="re_password")
     public WebElement confirmPassword;
 
-    @FindBy (id="[id='employeeId']")
+    @FindBy (id="employeeId")
     public WebElement employeeId;
 
-    @FindBy (id="[id='btnSave']")
+    @FindBy (id="btnSave")
     public WebElement saveButton;
 
     public  AddEmployeePage() {
