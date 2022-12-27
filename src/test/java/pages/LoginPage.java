@@ -18,7 +18,7 @@ public class LoginPage extends CommonMethods {
     @FindBy (id="[id='spanMessage']")
     public WebElement errorMessage;
 
-   public LoginPage(){
+    public LoginPage(){
         PageFactory.initElements(driver,this);
     }
 }
