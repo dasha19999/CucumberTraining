@@ -6,7 +6,6 @@ import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.ConfigReader;
 
-import static pages.PageInitializer.login;
 
 public class LoginSteps extends CommonMethods {
 
@@ -19,9 +18,9 @@ public class LoginSteps extends CommonMethods {
     @When("user enters valid username and valid password")
     public void user_enters_valid_username_and_valid_password() {
 
-        sendText(login.usernameTextField, ConfigReader.getPropertyValue("username"));
+        sendText(login.userNameField, ConfigReader.getPropertyValue("username"));
 
-        sendText(login.passwordTextField, ConfigReader.getPropertyValue("password"));
+        sendText(login.passWordField, ConfigReader.getPropertyValue("password"));
     }
 
     @When("user clicks on login button")
