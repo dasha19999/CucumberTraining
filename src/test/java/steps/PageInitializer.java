@@ -2,6 +2,7 @@ package steps;
 
 import pages.*;
 
+
 public class PageInitializer {
 
         public static LoginPage login;
@@ -11,6 +12,8 @@ public class PageInitializer {
 
         public static ContactDetailsPage contactDetails;
         public static EmployeeListPage employeeList;
+        public static PersonalDetailsPage personalDetails;
+
 
         public static void initializePageObjects() {
 
@@ -19,6 +22,8 @@ public class PageInitializer {
             addEmployee = new AddEmployeePage();
             contactDetails=new ContactDetailsPage();
             employeeList=new EmployeeListPage();
+            personalDetails=new PersonalDetailsPage();
+
         }
     }
 
