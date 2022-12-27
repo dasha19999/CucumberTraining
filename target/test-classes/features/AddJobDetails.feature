@@ -1,7 +1,7 @@
 Feature: Add Employee Job Details functionality
 
 Background:
-When user enters valid admin username and valid password
+When user enters valid admin username and valid admin password
 And user clicks on login button
 Then user is successfully logged in
 When user clicks on PIM option

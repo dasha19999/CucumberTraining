@@ -3,9 +3,12 @@ package steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 
-public class OpenEmployee extends CommonMethods {
+public class OpenEmployeeSteps extends CommonMethods {
 
     @When("user clicks on PIM option")
     public void userClicksOnPIMOption() {
@@ -14,10 +17,6 @@ public class OpenEmployee extends CommonMethods {
     @And("user clicks on Employee List button")
     public void userClicksOnEmployeeListButton() {
         click(dashboard.empListOption);
-    }
-    @Then("list of all Employees is displayed")
-    public void list_of_all_employees_is_displayed() {
-        System.out.println("List of all Employees is displayed");
     }
 
     @When("user enters valid employee id")
@@ -38,7 +37,8 @@ public class OpenEmployee extends CommonMethods {
 
     @Then("employee's personal page is displayed")
     public void that_employee_s_personal_page_is_displayed() {
-        System.out.println("Employee Personal page is displayed");
+        WebElement personalDetailsTab = driver.findElement(By.xpath("//h1[text() = 'Personal Details' ]"));
+        Assert.assertTrue(personalDetailsTab.isDisplayed());
     }
 
 }

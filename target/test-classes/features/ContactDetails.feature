@@ -3,9 +3,11 @@ Background:
   When user enters valid username and valid password
   And user clicks on login button
   Then user is successfully logged in
-  When user clicks on PIM option
-  And user clicks on Employee List button
-  And user clicks on any Employee id button
+  Then list of all Employees is displayed
+  When user enters valid employee id
+  And user clicks the search button
+  And user clicks the employee
+  Then employee's personal page is displayed
   And user clicks on Contact Details button
 
   Scenario: editing employee contact details
