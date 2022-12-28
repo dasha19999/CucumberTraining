@@ -17,6 +17,8 @@ public class PageInitializer {
     public static AddJobDetailsPage addJobDetails;
     public static CalendarPage calendar;
 
+    public static TerminatingEmployeePage terminatingEmployee;
+
 
     public static void initializePageObjects() {
 
@@ -28,7 +30,8 @@ public class PageInitializer {
         personalDetails = new PersonalDetailsPage();
         addJobDetails = new AddJobDetailsPage();
         calendar = new CalendarPage();
-
+        terminatingEmployee = new TerminatingEmployeePage();
     }
 }
+
 
