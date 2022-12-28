@@ -88,11 +88,12 @@ import java.util.concurrent.TimeUnit;
         }
 
         //to select date from calendar
-        public static void selectDateInCalendar(String year, String month, String day)  {
+        public static void selectDateInCalendar(String year, String month, String day) throws InterruptedException {
 
             selectDropDown(calendar.selectYear, year);
+            Thread.sleep(2000);
             selectDropDown(calendar.selectMonth, month);
-
+Thread.sleep(2000);
             for(WebElement date: calendar.dates) {
                 if(date.getText().equals(day)) {
                     click(date);
@@ -107,4 +108,3 @@ import java.util.concurrent.TimeUnit;
             }
         }
 
-    }

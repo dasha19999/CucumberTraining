@@ -65,8 +65,8 @@ public class AddJobDetailsSteps extends CommonMethods {
         }
     }
 
-    @Then("Joined Date calendar is displayed and user can pick following values from there")
-    public void joined_date_calendar_is_displayed_and_user_can_pick_following_values_from_there(DataTable datesTable) throws InterruptedException {
+    @Then("Joined Date calendar is displayed and user can input following values in Calendar field")
+    public void joined_date_calendar_is_displayed_and_user_can_input_following_values_in_calendar_field(DataTable datesTable) throws InterruptedException {
         Assert.assertTrue(addJobDetails.joinedDateLabel.isDisplayed());
         Assert.assertTrue(addJobDetails.joinedDateInputField.isDisplayed());
         Assert.assertTrue(addJobDetails.joinedDateCalendarIcon.isDisplayed());
@@ -78,30 +78,31 @@ public class AddJobDetailsSteps extends CommonMethods {
             String year = date.get("year");
             String month = date.get("month");
             String day = date.get("day");
-            String monthName = date.get("monthName");
 
-           inputDateInCalendar(addJobDetails.joinedDateInputField, year, month, day);
+            inputDateInCalendar(addJobDetails.joinedDateInputField, year, month, day);
 
             Thread.sleep(2000);
-        }
 
+        }
+    }
+
+        @Then("user can select following values from Calendar")
+        public void user_can_select_following_values_from_calendar(DataTable datesTable) throws InterruptedException {
+
+            List<Map<String, String>> datesList = datesTable.asMaps();
             for (Map<String, String> date : datesList) {
 
                 String year = date.get("year");
                 String day = date.get("day");
-                String monthName = date.get("monthName");
+                String month = date.get("month");
 
             click(addJobDetails.joinedDateCalendarIcon);
 
-
-            selectDateInCalendar(year, monthName, day.substring(1));
-
-           /* selectDropDown(addJobDetails.selectYear, year);
-            selectDropDown(addJobDetails.selectMonth, monthName);
-            WebElement dateBtn = driver.findElement(By.xpath("//table[@class = 'ui-datepicker-calendar']/tbody/tr/td/a[text() = "+ day+"]"));
-            dateBtn.click();*/
+            selectDateInCalendar(year, month, day);
 
             Thread.sleep(2000);
+
+
         }
     }
 

@@ -29,11 +29,17 @@ Feature: Add Employee Job Details functionality
       | Sales Workers |
       | Technicians   |
       | Artist        |
-    And Joined Date calendar is displayed and user can pick following values from there
-      | month | day | year |monthName|
-      | 08    | 23   | 2012 |Aug      |
-      | 11    | 05   | 2020 |Nov      |
-      | 01    | 16   | 2018 |Jan      |
+    And Joined Date calendar is displayed and user can input following values in Calendar field
+      | month | day | year |
+      | 08    | 23   | 2012 |
+      | 11    | 05   | 2020 |
+      | 01    | 16   | 2018 |
+
+    And user can select following values from Calendar
+      | month | day | year |
+      | Aug   | 23   | 2012 |
+      | Nov   | 5   | 2020 |
+      | Jan    | 16   | 2018 |
 
     And Sub Unit dropdown field is displayed and user can select values from there
     And Location dropdown field is displayed and user can select values from there
