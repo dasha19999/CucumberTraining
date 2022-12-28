@@ -42,23 +42,23 @@ Feature: Add Employee Job Details functionality
       | Jan   | 16  | 2018 |
 
     And Sub Unit dropdown field is displayed and user can select following values from there
-      | IT Support   |
-      | Test         |
-      | Team Leaders |
+      | IT Support          |
+      | Account             |
+      | Sales and marketing |
     And Location dropdown field is displayed and user can select following values from there
       | Big Office   |
-      | New Office         |
+      | New Office   |
       | White Office |
-    And Start Date calendar is displayed and user can pick values from there
+    And Start Date calendar is displayed and user can pick following values from there
       | month | day | year |
-      | 08    | 23  | 2012 |
-      | 11    | 05  | 2020 |
-      | 01    | 16  | 2018 |
-    And End Date calendar is displayed and user can pick values from there
+      | Aug   | 23  | 2012 |
+      | Nov   | 5  | 2020 |
+      | Jan   | 16  | 2018 |
+    And End Date calendar is displayed and user can pick following values from there
       | month | day | year |
-      | 08    | 23  | 2012 |
-      | 11    | 05  | 2020 |
-      | 01    | 16  | 2018 |
+      | Aug   | 23  | 2012 |
+      | Nov   | 5  | 2020 |
+      | Jan   | 16  | 2018 |
     And Contract Details file upload field is displayed and accepts file up to 1MB
 
 
