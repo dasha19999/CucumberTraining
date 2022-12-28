@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
             features = "src/test/resources/features/",
             glue = "steps",
             dryRun = false,
-            tags="@test07"
+            tags="@test07",
+
+            plugin={"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
     )
 
     public class Runner {
