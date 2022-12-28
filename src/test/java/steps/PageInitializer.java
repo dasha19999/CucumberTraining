@@ -16,6 +16,8 @@ public class PageInitializer {
 
         public static AddDependentPage addDependent;
 
+    public static CalendarPage calendar;
+
 
         public static void initializePageObjects() {
 
@@ -26,6 +28,7 @@ public class PageInitializer {
             employeeList=new EmployeeListPage();
             personalDetails=new PersonalDetailsPage();
             addDependent=new AddDependentPage();
+            calendar=new CalendarPage();
 
         }
     }

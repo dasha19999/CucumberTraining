@@ -58,21 +58,21 @@ public class AddDependentsSteps extends CommonMethods {
     }
 
 
-    @When("user choose month {string} and year {string}")
-    public void user_choose_month_and_year(String month, String year) {
-       selectDropDown(addDependent.selectMonth, month);
-       selectDropDown(addDependent.selectYear,year);
 
+    @When("user choose month {string} and birth year {string}")
+    public void user_choose_month_and_birth_year(String month, String year) {
+        selectDropDown(addDependent.selectMonth, month);
+        selectDropDown(addDependent.selectYear,year);
     }
 
-    @When("user choose day {string} from calendar")
-    public void user_choose_day_from_calendar(String date) {
-for(WebElement day: addDependent.selectDay){
-   if(day.getText().equals(date)){
-       day.click();
-       break;
-   }
-}
+    @When("user choose day {string}")
+    public void user_choose_day(String date) {
+        for(WebElement day: addDependent.selectDay){
+            if(day.getText().equals(date)){
+                day.click();
+                break;
+            }
+        }
     }
 
 

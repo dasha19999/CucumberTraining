@@ -78,4 +78,18 @@ import java.util.concurrent.TimeUnit;
             sel.selectByVisibleText(text);
         }
 
-}
+        //to select date from calendar
+        public static void selectDateInCalendar(String year, String month, String day) {
+
+            selectDropDown(calendar.selectYear, year);
+            selectDropDown(calendar.selectMonth, month);
+
+            for (WebElement date : calendar.dates) {
+                if (date.getText().equals(day)) {
+                    click(date);
+                }
+            }
+        }}
+
+
+
