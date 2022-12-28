@@ -21,6 +21,8 @@ public class PageInitializer {
     public static CalendarPage calendar;
     public static TerminatingEmployeePage terminatingEmployee;
 
+    public static AddDependentPage addDependent;
+
 
     public static void initializePageObjects() {
 
@@ -31,8 +33,9 @@ public class PageInitializer {
         contactDetails = new ContactDetailsPage();
         employeeList = new EmployeeListPage();
         personalDetails = new PersonalDetailsPage();
-        addJobDetails = new AddJobDetailsPage();
+        addDependent = new AddDependentPage();
         calendar = new CalendarPage();
+        addJobDetails = new AddJobDetailsPage();
         terminatingEmployee = new TerminatingEmployeePage();
         languages = new AddEmployeeLanguagesPages();
 

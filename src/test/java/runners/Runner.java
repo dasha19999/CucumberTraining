@@ -15,7 +15,10 @@ import org.junit.runner.RunWith;
             glue = "steps",
             dryRun = false,
             monochrome = true,
-            tags = "@test17"
+            tags="@test07",
+
+            plugin={"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
+
     )
 
     public class Runner {

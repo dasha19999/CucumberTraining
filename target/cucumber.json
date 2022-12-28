@@ -1,0 +1,306 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-12-28T23:13:18.768Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5126881200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.preCondition()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Adding dependents",
+        "description": "",
+        "id": "add-dependents-to-employee-s-personal-details;adding-dependents",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 329401800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters valid admin username and valid admin password",
+            "match": {
+              "location": "steps.LoginSteps.user_enters_valid_admin_username_and_valid_admin_password()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1704460700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.LoginSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62783600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is successfully logged in",
+            "match": {
+              "location": "steps.LoginSteps.user_is_successfully_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2611813900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on PIM option",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.userClicksOnPIMOption()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1834241900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicks on Employee List button",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.userClicksOnEmployeeListButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 99659700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters valid employee id",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.user_enters_valid_employee_id()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1674925200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks the search button",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.user_clicks_the_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1731502000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicks the employee",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.user_clicks_the_employee()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27922100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "employee\u0027s personal page is displayed",
+            "match": {
+              "location": "steps.OpenEmployeeSteps.that_employee_s_personal_page_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 880929500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "admin user clicks on Dependents button",
+            "match": {
+              "location": "steps.AddDependentsSteps.admin_user_clicks_on_dependents_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101338000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "admin user clicks on Add button",
+            "match": {
+              "location": "steps.AddDependentsSteps.admin_user_clicks_on_add_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155781400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "name textbox is displayed and user can enter values \"Anna\" there",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Anna\"",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.AddDependentsSteps.name_textbox_is_displayed_and_user_can_enter_values_there(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 253253700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "relationship dropdown field is displayed and user can select values from there",
+            "match": {
+              "location": "steps.AddDependentsSteps.relationship_dropdown_field_is_displayed_and_user_can_select_values_from_there(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Child"
+                ]
+              },
+              {
+                "cells": [
+                  "Other"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48439400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user select \"Child\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Child\"",
+                  "offset": 12
+                }
+              ],
+              "location": "steps.AddDependentsSteps.user_select(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28906000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "date of Birth calendar is displayed",
+            "match": {
+              "location": "steps.AddDependentsSteps.date_of_birth_calendar_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62324500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user click on calendar field",
+            "match": {
+              "location": "steps.AddDependentsSteps.user_click_on_calendar_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 484573600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user select date( year \"2014\", month \"Dec\", day \"22\")",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2014\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Dec\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"22\"",
+                  "offset": 48
+                }
+              ],
+              "location": "steps.AddDependentsSteps.user_select_date_year_month_day(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999153400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user clicks on save button",
+            "match": {
+              "location": "steps.AddDependentsSteps.user_clicks_on_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 220809100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "dependent added successfully",
+            "match": {
+              "location": "steps.AddDependentsSteps.dependent_added_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test07"
+          }
+        ]
+      }
+    ],
+    "name": "Add Dependents to Employee\u0027s Personal Details",
+    "description": "",
+    "id": "add-dependents-to-employee-s-personal-details",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AddDependents.feature",
+    "tags": []
+  }
+]

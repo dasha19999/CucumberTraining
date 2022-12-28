@@ -93,7 +93,6 @@ import java.util.concurrent.TimeUnit;
             sel.selectByVisibleText(text);
         }
 
-
         public static void sendTextandEnter(WebElement element, String textToSend) {
 
             element.clear();
@@ -103,8 +102,6 @@ import java.util.concurrent.TimeUnit;
 
         //to select date from calendar
         public static void selectDateInCalendar(String year, String month, String day) {
-
-            selectDropDown(calendar.selectYear, year);
 
             selectDropDown(calendar.selectMonth, month);
 
@@ -157,7 +154,11 @@ import java.util.concurrent.TimeUnit;
             return sdf.format(date);
         }
 
-
-
     }
+
+
+
+
+
+
 

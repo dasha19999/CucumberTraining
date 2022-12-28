@@ -22,4 +22,8 @@ public class CalendarPage extends CommonMethods {
 
         PageFactory.initElements(driver, this);
     }
+
 }
+
+
+
