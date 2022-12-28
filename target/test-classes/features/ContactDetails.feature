@@ -1,20 +1,22 @@
 Feature: contact details
 Background:
-  When user enters valid username and valid password
+  When user enters valid admin username and valid admin password
   And user clicks on login button
   Then user is successfully logged in
-  Then list of all Employees is displayed
+  When user clicks on PIM option
+  And user clicks on Employee List button
   When user enters valid employee id
   And user clicks the search button
   And user clicks the employee
   Then employee's personal page is displayed
   And user clicks on Contact Details button
-
+@test6
   Scenario: editing employee contact details
 
     Given the contact details are displayed
 
-    And Edit button is clickable
+    And user clicks on Edit button
+
     When I enter street address in the "Address Street 1" textbox
 
     And I enter  street address in the "Address Street 2" textbox

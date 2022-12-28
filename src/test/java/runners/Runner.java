@@ -11,9 +11,10 @@ import org.junit.runner.RunWith;
 
     @RunWith(Cucumber.class)
     @CucumberOptions(
-            features = "src/test/resources/features/Login.feature",
+            features = "src/test/resources/features/",
             glue = "steps",
-            dryRun = false
+            dryRun = false,
+            tags = "@test6"
     )
 
     public class Runner {
