@@ -39,7 +39,7 @@ public class TerminatingEmployeeSteps extends CommonMethods {
     WebElement employeeIsTerminated = driver.findElement(By.xpath("//*[@id=\"terminatedDate\"]/a"));
     Assert.assertTrue(employeeIsTerminated.isDisplayed());
     System.out.println("Employee Terminated Successfully");
-  //  click(terminatingEmployee.termBtn);//Re-activate Employee to simplify re-testing
+    click(terminatingEmployee.termBtn);//Re-activate Employee to simplify re-testing
     }
 
 }
