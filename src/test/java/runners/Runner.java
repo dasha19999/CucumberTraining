@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
     @CucumberOptions(
             features = "src/test/resources/features/",
             glue = "steps",
-            dryRun = false,
-            tags = "@test5"
+            dryRun = true,
+            tags = "@test10"
 
     )
 
