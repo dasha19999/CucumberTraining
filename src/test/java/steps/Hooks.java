@@ -12,8 +12,8 @@ public class Hooks extends CommonMethods {
         openBrowserAndLaunchApplication();
     }
 
-   @After
-   public void postCondition(Scenario scenario) {
-   closeBrowser();
-    }
+  // @After
+  // public void postCondition(Scenario scenario) {
+  // closeBrowser();
+   // }
 }
