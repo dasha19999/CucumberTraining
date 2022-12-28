@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
     @CucumberOptions(
             features = "src/test/resources/features/Login.feature",
             glue = "steps",
-            dryRun = false
+            dryRun = false,
+            tags = "@test11"
     )
 
     public class Runner {

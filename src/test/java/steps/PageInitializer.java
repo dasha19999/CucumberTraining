@@ -7,9 +7,8 @@ public class PageInitializer {
 
         public static LoginPage login;
         public static DashboardPage dashboard;
-
         public static AddEmployeePage addEmployee;
-
+        public static TerminatingEmployeePage terminatingEmployee;
         public static ContactDetailsPage contactDetails;
         public static EmployeeListPage employeeList;
         public static PersonalDetailsPage personalDetails;
@@ -23,7 +22,7 @@ public class PageInitializer {
             contactDetails=new ContactDetailsPage();
             employeeList=new EmployeeListPage();
             personalDetails=new PersonalDetailsPage();
-
+            terminatingEmployee=new TerminatingEmployeePage();
         }
     }
 
