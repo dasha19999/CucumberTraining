@@ -14,6 +14,8 @@ public class PageInitializer {
         public static EmployeeListPage employeeList;
         public static PersonalDetailsPage personalDetails;
 
+        public static AddDependentPage addDependent;
+
 
         public static void initializePageObjects() {
 
@@ -23,6 +25,7 @@ public class PageInitializer {
             contactDetails=new ContactDetailsPage();
             employeeList=new EmployeeListPage();
             personalDetails=new PersonalDetailsPage();
+            addDependent=new AddDependentPage();
 
         }
     }
