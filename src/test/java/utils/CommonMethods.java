@@ -30,16 +30,20 @@ import java.util.concurrent.TimeUnit;
 
             ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 
+
             switch (ConfigReader.getPropertyValue("browser")){
                 case "chrome"->{
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
             }
+
                 case "firefox"-> {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                 }
+
                 default-> throw new RuntimeException("Invalid browser name");
+
             }
 
             driver.manage().window().maximize();
