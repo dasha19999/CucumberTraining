@@ -54,12 +54,16 @@ public class AddDependentsSteps extends CommonMethods {
 
     @When("user click on calendar field")
     public void user_click_on_calendar_field() {
-        addDependent.dependentDOB.click();
+        addDependent.calendarIcon.click();
+    }
+
+    @When("user select date\\( year {string}, month {string}, day {string})")
+    public void user_select_date_year_month_day(String year, String month, String day) {
+       selectDateInCalendar(year, month, day);
     }
 
 
-
-    @When("user choose month {string} and birth year {string}")
+  /*  @When("user choose month {string} and birth year {string}")
     public void user_choose_month_and_birth_year(String month, String year) {
         selectDropDown(addDependent.selectMonth, month);
         selectDropDown(addDependent.selectYear,year);
@@ -74,7 +78,7 @@ public class AddDependentsSteps extends CommonMethods {
             }
         }
     }
-
+*/
 
     @When("user clicks on save button")
     public void user_clicks_on_save_button() {

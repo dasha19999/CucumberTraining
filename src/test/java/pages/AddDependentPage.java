@@ -39,6 +39,9 @@ public class AddDependentPage extends CommonMethods {
 @FindBy(xpath = "//table[@id='dependent_list']/tbody/tr/td")
 public List<WebElement>dependents;
 
+@FindBy(xpath = "//img[@class='ui-datepicker-trigger']")
+public WebElement calendarIcon;
+
     public AddDependentPage() {
         PageFactory.initElements(driver, this);
     }

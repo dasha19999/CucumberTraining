@@ -20,9 +20,8 @@ Feature: Add Dependents to Employee's Personal Details
      |Other|
      And user select "Child"
     And date of Birth calendar is displayed
-     And user click on calendar field
-     And user choose month "Dec" and birth year "2014"
-     And user choose day "23"
+    And user click on calendar field
+     And user select date( year "2014", month "Dec", day "22")
     And user clicks on save button
     Then dependent added successfully
 
