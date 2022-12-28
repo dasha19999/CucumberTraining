@@ -1,6 +1,7 @@
 package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -52,6 +53,7 @@ import java.util.concurrent.TimeUnit;
 
         }
 
+
 //to get webdriver wait
 
         public static WebDriverWait createWait() {
@@ -61,7 +63,7 @@ import java.util.concurrent.TimeUnit;
             return wait;
         }
 
-        public static void waitToBeClickable(WebElement element){
+        public static void waitToBeClickable(WebElement element) {
 
             createWait().until(ExpectedConditions.elementToBeClickable(element));
         }
@@ -78,4 +80,31 @@ import java.util.concurrent.TimeUnit;
             sel.selectByVisibleText(text);
         }
 
-}
+        public static void sendTextandEnter(WebElement element, String textToSend) {
+
+            element.clear();
+            element.sendKeys(textToSend, Keys.ENTER);
+
+        }
+
+        //to select date from calendar
+        public static void selectDateInCalendar(String year, String month, String day)  {
+
+            selectDropDown(calendar.selectYear, year);
+            selectDropDown(calendar.selectMonth, month);
+
+            for(WebElement date: calendar.dates) {
+                if(date.getText().equals(day)) {
+                    click(date);
+                }
+            }
+        }
+
+        //to input date in the field by hand
+        public static void inputDateInCalendar(WebElement field,String year, String month, String day)  {
+
+            sendTextandEnter(addJobDetails.joinedDateInputField, year + "-" + month + "-" + day);
+            }
+        }
+
+    }

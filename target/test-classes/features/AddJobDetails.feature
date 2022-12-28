@@ -17,10 +17,24 @@ Feature: Add Employee Job Details functionality
   @test10
   Scenario: adding job details to an existing employee profile
 
-    Then Job Title dropdown field is displayed and user can select values from there
-    And Employment Status dropdown field is displayed and user can select values from there
-    And Job Category dropdown field is displayed and user can select values from there
-    And Joined Date calendar is displayed and user can pick values from there
+    Then Job Title dropdown field is displayed and user can select following values from there
+      | Cloud Engineer |
+      | QA lead        |
+      | Trainee        |
+    And Employment Status dropdown field is displayed and user can select following values from there
+      | Active      |
+      | Fired       |
+      | in training |
+    And Job Category dropdown field is displayed and user can select following values from there
+      | Sales Workers |
+      | Technicians   |
+      | Artist        |
+    And Joined Date calendar is displayed and user can pick following values from there
+      | month | day | year |monthName|
+      | 08    | 23   | 2012 |Aug      |
+      | 11    | 05   | 2020 |Nov      |
+      | 01    | 16   | 2018 |Jan      |
+
     And Sub Unit dropdown field is displayed and user can select values from there
     And Location dropdown field is displayed and user can select values from there
     And Start Date calendar is displayed and user can pick values from there

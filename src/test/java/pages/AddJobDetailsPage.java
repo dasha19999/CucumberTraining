@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class AddJobDetailsPage extends CommonMethods {
@@ -11,7 +12,7 @@ public class AddJobDetailsPage extends CommonMethods {
     public WebElement jobTitleLabel;
 
     @FindBy(xpath = "//select[@id =\"job_job_title\"]")
-    public WebElement JobTitleDropDown;
+    public WebElement jobTitleDropDown;
 
     //Employment Status
     @FindBy(xpath = "//label[text() = 'Employment Status']")
@@ -86,9 +87,27 @@ public class AddJobDetailsPage extends CommonMethods {
     @FindBy(xpath = "//input[@id = 'btnSave']")
     public WebElement editBtn;
 
+    @FindBy(xpath = "//h1[text() = 'Job']")
+    public WebElement header;
+
     @FindBy(xpath = "//input[@value = 'Save']")
     public WebElement saveBtn;
 
     @FindBy(xpath = "//table[@class = 'ui-datepicker-calendar']")
     public WebElement calendar;
+
+    @FindBy(xpath = "//select[@class = 'ui-datepicker-month']")
+    public WebElement selectMonth;
+
+    @FindBy(xpath = "//select[@class = 'ui-datepicker-year']")
+    public WebElement selectYear;
+
+    //@FindBy(xpath = "//table[@class = 'ui-datepicker-calendar']/tbody/tr/td/a[text() = " + date + "]")
+    //WebElement dateBtn;
+
+
+    public AddJobDetailsPage() {
+        PageFactory.initElements(driver, this);
+
+    }
 }
