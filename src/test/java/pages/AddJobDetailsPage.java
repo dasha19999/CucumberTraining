@@ -96,6 +96,9 @@ public class AddJobDetailsPage extends CommonMethods {
     @FindBy(xpath = "//div[@class = 'message success fadable']")
     public WebElement successMessage;
 
+    @FindBy(xpath = "//input[@id = 'job_contract_update_2']")
+    public WebElement deleteCurrentContractBtn;
+
     public AddJobDetailsPage() {
         PageFactory.initElements(driver, this);
 

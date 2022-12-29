@@ -170,6 +170,12 @@ public class AddJobDetailsSteps extends CommonMethods {
         click(addJobDetails.saveBtn);
         waitForVisibility(addJobDetails.successMessage);
         Assert.assertTrue(addJobDetails.successMessage.getText().contains("Successfully Updated"));
+
+        //delete contract to simplify retesting
+
+        click(addJobDetails.editBtn);
+        click(addJobDetails.deleteCurrentContractBtn);
+        click(addJobDetails.saveBtn);
     }
 
 }
