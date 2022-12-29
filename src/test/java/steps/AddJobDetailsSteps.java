@@ -164,9 +164,12 @@ public class AddJobDetailsSteps extends CommonMethods {
 
     @Then("Contract Details file upload field is displayed and accepts file up to 1MB")
     public void contract_details_file_upload_field_is_displayed_and_accepts_file_up_to_1mb() {
-       Assert.assertTrue(addJobDetails.contractDetailsLabel.isDisplayed());
-       Assert.assertTrue(addJobDetails.contractUploadBtn.isDisplayed());
-       sendText(addJobDetails.contractUploadBtn, Constants.CONTRACT_FILEPATH);
+        Assert.assertTrue(addJobDetails.contractDetailsLabel.isDisplayed());
+        Assert.assertTrue(addJobDetails.contractUploadBtn.isDisplayed());
+        sendText(addJobDetails.contractUploadBtn, Constants.CONTRACT_FILEPATH);
+        click(addJobDetails.saveBtn);
+        waitForVisibility(addJobDetails.successMessage);
+        Assert.assertTrue(addJobDetails.successMessage.getText().contains("Successfully Updated"));
     }
 
 }

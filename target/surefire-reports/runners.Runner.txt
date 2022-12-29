@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runners.Runner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.167 s <<< FAILURE! - in runners.Runner
-Add Employee Job Details functionality.adding job details to an existing employee profile  Time elapsed: 17.647 s  <<< ERROR!
-java.lang.ArithmeticException: / by zero
-	at steps.AddJobDetailsSteps.user_clicks_job_button(AddJobDetailsSteps.java:18)
-	at ✽.user clicks Job button(file:///C:/Users/elena/OneDrive/Desktop/GroupProject/Group5B14/src/test/resources/features/AddJobDetails.feature:13)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.336 s - in runners.Runner

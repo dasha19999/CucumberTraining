@@ -93,18 +93,8 @@ public class AddJobDetailsPage extends CommonMethods {
     @FindBy(xpath = "//input[@value = 'Save']")
     public WebElement saveBtn;
 
-    @FindBy(xpath = "//table[@class = 'ui-datepicker-calendar']")
-    public WebElement calendar;
-
-    @FindBy(xpath = "//select[@class = 'ui-datepicker-month']")
-    public WebElement selectMonth;
-
-    @FindBy(xpath = "//select[@class = 'ui-datepicker-year']")
-    public WebElement selectYear;
-
-    //@FindBy(xpath = "//table[@class = 'ui-datepicker-calendar']/tbody/tr/td/a[text() = " + date + "]")
-    //WebElement dateBtn;
-
+    @FindBy(xpath = "//div[@class = 'message success fadable']")
+    public WebElement successMessage;
 
     public AddJobDetailsPage() {
         PageFactory.initElements(driver, this);

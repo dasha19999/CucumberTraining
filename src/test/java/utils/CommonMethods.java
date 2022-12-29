@@ -81,6 +81,12 @@ import java.util.concurrent.TimeUnit;
             createWait().until(ExpectedConditions.elementToBeClickable(element));
         }
 
+        public static void waitForVisibility(WebElement element) {
+
+            createWait().until(ExpectedConditions.visibilityOf(element));
+
+        }
+
         public static void click(WebElement element) {
 
             waitToBeClickable(element);
