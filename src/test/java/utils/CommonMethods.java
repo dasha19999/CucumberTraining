@@ -113,7 +113,9 @@ import java.util.concurrent.TimeUnit;
 
             for(WebElement date: calendar.dates) {
                 if(date.getText().equals(day)) {
+                    waitToBeClickable(date);
                     click(date);
+                    break;
                 }
             }
         }
