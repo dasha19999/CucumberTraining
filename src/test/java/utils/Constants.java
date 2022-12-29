@@ -11,5 +11,5 @@ public class Constants {
 
     public static final String SCREENSHOT_FILEPATH = System.getProperty("user.dir")+"/screenshots/";
 
-    public static final String CONTRACT_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/testdata/gistfile1.txt";
+    public static final String CONTRACT_FILEPATH = System.getProperty("user.dir") + "/src/test/resources/testdata/contractTest.txt";
 }
