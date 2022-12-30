@@ -70,6 +70,9 @@ import java.util.concurrent.TimeUnit;
             element.sendKeys(textToSend);
 
         }
+        public static void clear (WebElement element){
+            element.clear();
+        }
 
 
 //to get webdriver wait
