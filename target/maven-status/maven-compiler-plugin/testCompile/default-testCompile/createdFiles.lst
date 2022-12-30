@@ -6,11 +6,11 @@ pages\DashboardPage.class
 utils\ConfigReader.class
 utils\CommonMethods.class
 pages\ContactDetailsPage.class
+utils\Log.class
 pages\TerminatingEmployeePage.class
 pages\AddEmployeeLanguagesPages.class
 steps\AddDependentsSteps.class
 pages\AddJobDetailsPage.class
-steps\ContactDetails.class
 steps\AddJobDetailsSteps.class
 steps\Hooks.class
 steps\PageInitializer.class
@@ -20,6 +20,7 @@ steps\OpenEmployeeSteps.class
 utils\ExcelReader.class
 pages\CalendarPage.class
 runners\Runner.class
+steps\ContactDetailsSteps.class
 runners\FailedRunner.class
 pages\EmployeeListPage.class
 steps\TerminatingEmployeeSteps.class

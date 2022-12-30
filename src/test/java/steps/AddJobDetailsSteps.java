@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import utils.CommonMethods;
 import utils.Constants;
+import utils.Log;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,8 @@ public class AddJobDetailsSteps extends CommonMethods {
 
     @When("user clicks Job button")
     public void user_clicks_job_button() {
+
+        Log.info("Add Job Details Test started");
         click(personalDetails.Job);
     }
 
@@ -35,7 +38,6 @@ public class AddJobDetailsSteps extends CommonMethods {
         List<String> titles = jobTitles.asList();
         for (String title : titles) {
             selectDropDown(addJobDetails.jobTitleDropDown, title);
-
 
         }
 
@@ -187,6 +189,8 @@ public class AddJobDetailsSteps extends CommonMethods {
         click(addJobDetails.editBtn);
         click(addJobDetails.deleteCurrentContractBtn);
         click(addJobDetails.saveBtn);
+
+        Log.info("Add Job Details Steps ended");
     }
 
 }

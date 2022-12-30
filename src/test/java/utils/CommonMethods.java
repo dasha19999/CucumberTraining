@@ -2,6 +2,7 @@ package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,10 +53,14 @@ import java.util.concurrent.TimeUnit;
 
             initializePageObjects();
 
+            DOMConfigurator.configure("log4j.xml");
+            Log.startTest("Test is started");
+
         }
 
         public static void closeBrowser() {
 
+            Log.endTest("Test is ended");
             driver.quit();
         }
 
