@@ -10,34 +10,24 @@ import utils.CommonMethods;
 public class TerminatingEmployeeSteps extends CommonMethods {
 
 
-    @When("Admin searches employee using employee Id")
-    public void admin_selects_a_specified_employee() throws InterruptedException {
-
-        sendText(employeeList.empSearchIdField,"43961A");
-        click(employeeList.searchButton);
-        click(employeeList.clickEmployeeButton);
-
-    }
-
-    @When("clicks on Job")
-    public void clicks_on_job() {
+    @When("user clicks on Job")
+    public void user_clicks_on_job() {
     click(personalDetails.Job);
     }
 
-    @When("clicks on Terminate Employment")
-    public void clicks_on_terminate_employment() {
+    @When("user clicks on Terminate Employment")
+    public void user_clicks_on_terminate_employment() {
     click(terminatingEmployee.termBtn);
     }
 
-    @When("clicks on Confrim")
-    public void clicks_on_Confirm() {
+    @When("user clicks on Confirm")
+    public void user_clicks_on_Confirm() {
     click(terminatingEmployee.confirmBtn);
     }
 
     @Then("specified employee is terminated")
     public void specified_employee_is_terminated() {
-    WebElement employeeIsTerminated = driver.findElement(By.xpath("//*[@id=\"terminatedDate\"]/a"));
-    Assert.assertTrue(employeeIsTerminated.isDisplayed());
+    Assert.assertTrue(terminatingEmployee.terminatedMessage.isDisplayed());
     System.out.println("Employee Terminated Successfully");
     click(terminatingEmployee.termBtn);//Re-activate Employee to simplify re-testing
     }

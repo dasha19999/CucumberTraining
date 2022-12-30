@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,6 +14,8 @@ public class TerminatingEmployeePage extends CommonMethods {
     @FindBy(id="dialogConfirm")
     public WebElement confirmBtn;
 
+    @FindBy(xpath = "//*[@id=\"terminatedDate\"]/a")
+    public WebElement terminatedMessage;
 
 
     public TerminatingEmployeePage() {
