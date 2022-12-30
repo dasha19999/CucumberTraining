@@ -17,27 +17,27 @@ Background:
 
     And user clicks on Edit button
 
-    When I enter street address in the "Address Street 1" textbox
+    When I enter "123 West ln" in the Address Street First textbox
 
-    And I enter  street address in the "Address Street 2" textbox
+    And I enter "apt 103" in the Address Street Second textbox
 
-    And I enter city in the "City" textbox
+    And I enter "Kazan" in the City textbox
 
-    And I enter state or province in the "State/Province" textbox
+    And I enter "Tatarstan" or province in the State textbox
 
-    And I enter zip or postal code in the "Zip/Postal Code" textbox
+    And I enter "23456" in the Zip Postal Code textbox
 
-    And I select country from the "Country" dropdown
+    And I select "Albania" from the Country dropdown
 
-    And I enter home phone number in the "Home Phone" textbox
+    And I enter "567-678-5678" number in the Home Phone textbox
 
-    And I enter mobile phone number in the "Mobile Phone" textbox
+    And I enter "345-678-8909" number in the Mobile Phone textbox
 
-    And I enter work phone number in the "Work Phone" textbox
+    And I enter "757-024-4758" number in the Work Phone textbox
 
-    And I enter work email in the "Work Email" textbox
+    And I enter "superhero23456@gmail.com" in the Work Email textbox
 
-    And I enter other email in the "Other Email" textbox
+    And I enter "supermario34567@yahoo.com" in the Other Email textbox
 
     Then I should be able to submit the form
 

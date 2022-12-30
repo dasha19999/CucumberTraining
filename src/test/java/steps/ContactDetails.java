@@ -14,7 +14,7 @@ public class ContactDetails extends CommonMethods {
 
     @And("user clicks on Contact Details button")
     public void userClicksOnContactDetailsButton() {
-click(contactDetails.contactDetailsButton);
+        click(contactDetails.contactDetailsButton);
 
     }
 
@@ -26,63 +26,63 @@ click(contactDetails.contactDetailsButton);
 
     @Given("user clicks on Edit button")
     public void edit_button_is_clickable() {
-      click(contactDetails.editButton);
+        click(contactDetails.editButton);
     }
 
-    @When("I enter street address in the {string} textbox")
-    public void iEnterStreetAddressInTheTextbox(String arg0) {
-        sendText(contactDetails.street1, "123 west ln");
+    @When("I enter {string} in the Address Street First textbox")
+    public void iEnterStreetAddressInTheTextbox(String address) {
+        sendText(contactDetails.street1, address);
     }
 
 
-    @And("I enter  street address in the {string} textbox")
+    @And("I enter {string} in the Address Street Second textbox")
     public void IEnterStreetAddressInTheTextbox(String adress2) {
-        sendText(contactDetails.street2, "apt 123");
+        sendText(contactDetails.street2, adress2);
     }
 
-    @When("I enter city in the {string} textbox")
-    public void i_enter_city_in_the_textbox(String string) {
-    sendText(contactDetails.city, "Gotam");
+    @When("I enter {string} in the City textbox")
+    public void i_enter_city_in_the_textbox(String city) {
+        sendText(contactDetails.city, city);
     }
 
-    @When("I enter state or province in the {string} textbox")
-    public void i_enter_state_or_province_in_the_textbox(String string) {
-        sendText(contactDetails.state, "Virginia");
+    @When("I enter {string} or province in the State textbox")
+    public void i_enter_state_or_province_in_the_textbox(String state) {
+        sendText(contactDetails.state, state);
     }
 
-    @When("I enter zip or postal code in the {string} textbox")
-    public void i_enter_zip_or_postal_code_in_the_textbox(String string) {
-       sendText(contactDetails.zip, "12345");
+    @When("I enter {string} in the Zip Postal Code textbox")
+    public void i_enter_zip_or_postal_code_in_the_textbox(String zip) {
+        sendText(contactDetails.zip, zip);
     }
 
-    @When("I select country from the {string} dropdown")
-    public void i_select_country_from_the_dropdown(String string) {
-       selectDropDown(contactDetails.country, "Albania");
+    @When("I select {string} from the Country dropdown")
+    public void i_select_country_from_the_dropdown(String country) {
+        selectDropDown(contactDetails.country, country);
     }
 
-    @When("I enter home phone number in the {string} textbox")
-    public void i_enter_home_phone_number_in_the_textbox(String string) {
-       sendText(contactDetails.HomePhone, "123-234-233");
+    @When("I enter {string} number in the Home Phone textbox")
+    public void i_enter_home_phone_number_in_the_textbox(String homePhone) {
+        sendText(contactDetails.HomePhone, homePhone);
     }
 
-    @When("I enter mobile phone number in the {string} textbox")
-    public void i_enter_mobile_phone_number_in_the_textbox(String string) {
-        sendText(contactDetails.Mobile, "234-234-334");
+    @When("I enter {string} number in the Mobile Phone textbox")
+    public void i_enter_mobile_phone_number_in_the_textbox(String Mobile) {
+        sendText(contactDetails.Mobile, Mobile);
     }
 
-    @When("I enter work phone number in the {string} textbox")
-    public void i_enter_work_phone_number_in_the_textbox(String string) {
-       sendText(contactDetails.WorkPhone, "233-444-444");
+    @When("I enter {string} number in the Work Phone textbox")
+    public void i_enter_work_phone_number_in_the_textbox(String workPhone) {
+        sendText(contactDetails.WorkPhone, workPhone);
     }
 
-    @When("I enter work email in the {string} textbox")
-    public void i_enter_work_email_in_the_textbox(String string) {
-       sendText(contactDetails.WorkEmail, "lukyguy@gmail.com");
+    @When("I enter {string} in the Work Email textbox")
+    public void i_enter_work_email_in_the_textbox(String workEmail) {
+        sendText(contactDetails.WorkEmail, workEmail);
     }
 
-    @When("I enter other email in the {string} textbox")
-    public void i_enter_other_email_in_the_textbox(String string) {
-        sendText(contactDetails.OtherEmail, "superman@yahoo.com");
+    @When("I enter {string} in the Other Email textbox")
+    public void i_enter_other_email_in_the_textbox(String otherEmail) {
+        sendText(contactDetails.OtherEmail, otherEmail);
     }
 
     @Then("I should be able to submit the form")
@@ -93,6 +93,13 @@ click(contactDetails.contactDetailsButton);
     @Then("contact information should be saved successfully.")
     public void contact_information_should_be_saved_successfully() {
         System.out.println("Contact information is saved successfully");
+
+
+        click(contactDetails.editButton);
+        clear(contactDetails.OtherEmail);
+        clear(contactDetails.WorkEmail);
+        click(contactDetails.btnSave);
+
     }
 
 
