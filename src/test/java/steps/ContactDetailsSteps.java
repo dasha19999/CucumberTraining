@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 
-public class ContactDetails extends CommonMethods {
+public class ContactDetailsSteps extends CommonMethods {
 
 
     @And("user clicks on Contact Details button")
