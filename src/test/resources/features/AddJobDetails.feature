@@ -60,6 +60,8 @@ Feature: Add Employee Job Details functionality
       | Nov   | 5  | 2020 |
       | Jan   | 16  | 2018 |
     And Contract Details file upload field is displayed and accepts file up to 1MB
+    Then user can press save button
+    Then success message is shown
 
 
 

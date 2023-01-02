@@ -172,7 +172,15 @@ public class AddJobDetailsSteps extends CommonMethods {
         Assert.assertTrue(addJobDetails.contractDetailsLabel.isDisplayed());
         Assert.assertTrue(addJobDetails.contractUploadBtn.isDisplayed());
         sendText(addJobDetails.contractUploadBtn, Constants.CONTRACT_FILEPATH);
+    }
+
+    @Then("user can press save button")
+    public void user_can_press_save_button() {
         click(addJobDetails.saveBtn);
+    }
+
+    @Then("success message is shown")
+    public void success_message_is_shown() {
         waitForVisibility(addJobDetails.successMessage);
         Assert.assertTrue(addJobDetails.successMessage.getText().contains("Successfully Updated"));
 
