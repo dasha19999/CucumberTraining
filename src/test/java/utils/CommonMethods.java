@@ -117,11 +117,12 @@ import java.util.concurrent.TimeUnit;
         //to select date from calendar
         public static void selectDateInCalendar(String year, String month, String day) {
 
+            waitToBeClickable(calendar.selectMonth);
             selectDropDown(calendar.selectMonth, month);
+            selectDropDown(calendar.selectYear, year);
 
             for(WebElement date: calendar.dates) {
                 if(date.getText().equals(day)) {
-                    waitToBeClickable(date);
                     click(date);
                     break;
                 }

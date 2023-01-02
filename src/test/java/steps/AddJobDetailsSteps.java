@@ -84,8 +84,8 @@ public class AddJobDetailsSteps extends CommonMethods {
         }
     }
 
-    @Then("user can select following values from Calendar")
-    public void user_can_select_following_values_from_calendar(DataTable datesTable) throws InterruptedException {
+   @Then("user can select following values from Calendar")
+    public void user_can_select_following_values_from_calendar(DataTable datesTable) {
 
         List<Map<String, String>> datesList = datesTable.asMaps();
         for (Map<String, String> date : datesList) {
@@ -94,12 +94,10 @@ public class AddJobDetailsSteps extends CommonMethods {
             String day = date.get("day");
             String month = date.get("month");
 
-            waitToBeClickable(addJobDetails.joinedDateCalendarIcon);
+
             click(addJobDetails.joinedDateCalendarIcon);
 
             selectDateInCalendar(year, month, day);
-
-            Thread.sleep(1000);
 
         }
     }
@@ -141,18 +139,15 @@ public class AddJobDetailsSteps extends CommonMethods {
             String day = date.get("day");
             String month = date.get("month");
 
-            waitToBeClickable(addJobDetails.contractStartDateCalendarIcon);
             click(addJobDetails.contractStartDateCalendarIcon);
 
             selectDateInCalendar(year, month, day);
-
-            Thread.sleep(1000);
 
         }
     }
 
     @Then("End Date calendar is displayed and user can pick following values from there")
-    public void end_date_calendar_is_displayed_and_user_can_pick_following_values_from_there(DataTable datesTable) throws InterruptedException {
+    public void end_date_calendar_is_displayed_and_user_can_pick_following_values_from_there(DataTable datesTable)  {
         Assert.assertTrue(addJobDetails.contractEndDateLabel.isDisplayed());
         Assert.assertTrue(addJobDetails.contractEndDateInputField.isDisplayed());
         Assert.assertTrue(addJobDetails.contractEndDateCalendarIcon.isDisplayed());
@@ -165,12 +160,9 @@ public class AddJobDetailsSteps extends CommonMethods {
             String day = date.get("day");
             String month = date.get("month");
 
-            waitToBeClickable(addJobDetails.contractEndDateCalendarIcon);
             click(addJobDetails.contractEndDateCalendarIcon);
 
             selectDateInCalendar(year, month, day);
-            Thread.sleep(1000);
-
 
         }
     }
