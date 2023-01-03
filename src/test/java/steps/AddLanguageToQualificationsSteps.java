@@ -50,8 +50,6 @@ public class AddLanguageToQualificationsSteps extends CommonMethods {
         int counter = 0;
         for (WebElement languageLine : addLanguage.languageTableLines) {
             if (languageLine.getText().equals(language)) {
-                System.out.println(counter);
-                System.out.println("//*[@id='recordsListTable']/tbody/tr["+(counter+1)+"]/td[1]");
                 WebElement clickBtn = driver.findElement(By.xpath("//*[@id='recordsListTable']/tbody/tr["+(counter+1)+"]/td[1]"));
                 click(clickBtn);
                 break;
