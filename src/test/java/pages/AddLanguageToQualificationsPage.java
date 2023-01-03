@@ -27,9 +27,9 @@ public class AddLanguageToQualificationsPage extends CommonMethods {
     @FindBy (id="btnSave")
     public WebElement saveButton;
 
-    @FindBy (xpath = "//*[@id='recordsListTable']/tbody/tr")
-    public List<WebElement> languageTableLines;
-    public String tableLinePath = "//*[@id='recordsListTable']/tbody/tr";
+
+    public String tableLocator = "//*[@id='recordsListTable']";
+
 
     @FindBy (id="btnDel")
     public WebElement deleteButton;

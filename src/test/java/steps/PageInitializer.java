@@ -11,7 +11,7 @@ public class PageInitializer {
 
     public static AddEmployeePage addEmployee;
 
-    public static AddEmployeeLanguagesPages languages;
+    public static AddEmployeeLanguagesPage addEmployeeLanguages;
 
     public static ContactDetailsPage contactDetails;
     public static EmployeeListPage employeeList;
@@ -22,7 +22,7 @@ public class PageInitializer {
     public static TerminatingEmployeePage terminatingEmployee;
 
     public static AddDependentPage addDependent;
-    public static AddLanguageToQualificationsPage addLanguage;
+    public static AddLanguageToQualificationsPage addLanguageToQualifications;
 
 
     public static void initializePageObjects() {
@@ -38,8 +38,8 @@ public class PageInitializer {
         calendar = new CalendarPage();
         addJobDetails = new AddJobDetailsPage();
         terminatingEmployee = new TerminatingEmployeePage();
-        languages = new AddEmployeeLanguagesPages();
-        addLanguage=new AddLanguageToQualificationsPage();
+        addEmployeeLanguages = new AddEmployeeLanguagesPage();
+        addLanguageToQualifications =new AddLanguageToQualificationsPage();
 
     }
 

@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
     public class CommonMethods extends PageInitializer {
@@ -169,6 +170,21 @@ import java.util.concurrent.TimeUnit;
             Date date = new Date();
             SimpleDateFormat sdf = new SimpleDateFormat(pattern);
             return sdf.format(date);
+        }
+
+        public static void selectCheckBoxInTable(String textToLocate, String tablelocator) {
+
+            int counter = 0;
+            List<WebElement> listOfLines = driver.findElements(By.xpath(tablelocator+"/tbody/tr"));
+            for (WebElement line : listOfLines) {
+                System.out.println(line.getText());
+                if (line.getText().contains(textToLocate)) {
+                    WebElement clickBtn = driver.findElement(By.xpath(tablelocator+"/tbody/tr[" + (counter + 1) + "]/td[1]"));
+                    click(clickBtn);
+                    break;
+                }
+                counter++;
+            }
         }
 
     }
