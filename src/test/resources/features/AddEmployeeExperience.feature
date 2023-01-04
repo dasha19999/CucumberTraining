@@ -20,7 +20,7 @@ Feature: Add Employee Experience
     When Company text box is displayed user enters value "Radio Depot"
     And Job Title text box is displayed user enters value "Manager"
     And user clicks From text box and Calender is displayed
-    And user select From date\ month "Jan", year "2018", day "01"
+    And user select From date\ month "Jan", year "2018", day "1"
     When user clicks To text box and Calender is displayed
     And user select To date\ month "Sep", year "2022", day "30"
     When Comment text box is displayed user enters value "Worked there for 4yrs."

@@ -9,17 +9,19 @@ public class AddEmployeeExperienceSteps extends CommonMethods {
 
     @When("on Work Experience section User clicks Add button")
     public void on_work_experience_section_user_clicks_add_button() {
-    click(addEmployeeExperience.addWorkExperience);
+        click(addEmployeeExperience.addWorkExperience);
     }
 
     @When("Company text box is displayed user enters value {string}")
     public void company_text_box_is_displayed_user_enters_value(String companyName) {
-    sendText(addEmployeeExperience.companyField,companyName);
+        Assert.assertTrue(addEmployeeExperience.companyField.isDisplayed());
+        sendText(addEmployeeExperience.companyField, companyName);
     }
 
     @When("Job Title text box is displayed user enters value {string}")
     public void job_title_text_box_is_displayed_user_enters_value(String jobTitle) {
-        sendText(addEmployeeExperience.experience_jobtitle,jobTitle);
+        Assert.assertTrue(addEmployeeExperience.experience_jobtitle.isDisplayed());
+        sendText(addEmployeeExperience.experience_jobtitle, jobTitle);
     }
 
     @When("user clicks From text box and Calender is displayed")
@@ -30,7 +32,7 @@ public class AddEmployeeExperienceSteps extends CommonMethods {
     @When("user select From date\\ month {string}, year {string}, day {string}")
     public void user_select_from_date_month_year_day(String month, String year, String day) {
         click(addEmployeeExperience.experience_from_date);
-        selectDateInCalendar(year,month,day);
+        selectDateInCalendar(year, month, day);
     }
 
     @When("user clicks To text box and Calender is displayed")
@@ -38,21 +40,23 @@ public class AddEmployeeExperienceSteps extends CommonMethods {
         Assert.assertTrue(addEmployeeExperience.experience_to_date.isDisplayed());
 
     }
+
     @When("user select To date\\ month {string}, year {string}, day {string}")
     public void user_select_to_date_month_year_day(String month, String year, String day) {
-       click(addEmployeeExperience.experience_to_date);
-        selectDateInCalendar(year,month,day);
+        click(addEmployeeExperience.experience_to_date);
+        selectDateInCalendar(year, month, day);
     }
 
 
     @When("Comment text box is displayed user enters value {string}")
     public void comment_text_box_is_displayed_user_enters_value(String comment) {
-       sendText(addEmployeeExperience.experience_comments,comment);
+        Assert.assertTrue(addEmployeeExperience.experience_comments.isDisplayed());
+        sendText(addEmployeeExperience.experience_comments, comment);
     }
 
     @When("user clicks on save button on Work Experience tab")
     public void user_clicks_on_save_button_on_work_experience_tab() {
-       click(addEmployeeExperience.btnWorkExpSave);
+        click(addEmployeeExperience.btnWorkExpSave);
     }
 
     @Then("user successfully added work experience")
