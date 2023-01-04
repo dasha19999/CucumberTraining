@@ -24,6 +24,8 @@ public class PageInitializer {
     public static AddDependentPage addDependent;
     public static AddLanguageToQualificationsPage addLanguageToQualifications;
 
+    public static AddEmployeeExperiencePage addEmployeeExperiencePage;
+
 
     public static void initializePageObjects() {
 
@@ -40,7 +42,7 @@ public class PageInitializer {
         terminatingEmployee = new TerminatingEmployeePage();
         addEmployeeLanguages = new AddEmployeeLanguagesPage();
         addLanguageToQualifications =new AddLanguageToQualificationsPage();
-
+        addEmployeeExperiencePage = new AddEmployeeExperiencePage();
     }
 
 }
