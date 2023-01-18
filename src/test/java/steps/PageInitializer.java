@@ -4,6 +4,7 @@ import pages.*;
 
 
 public class PageInitializer {
+    public static String id;
 
 
     public static LoginPage login;
